@@ -356,30 +356,61 @@ product_listmain xans-product-listmain
 ****/
 .ub-style.main_product_list {
   position: relative;
+
 }
 
 /* 섹션타이틀 위치 조정 */
-.ub-style.main_product_list .main_title {
+.section.ub-style.main_product_list .main_title {
   position: absolute;
   left: calc(50% + 10px);
   top: 10px;
 }
 
+.section.ub-style.main_product_list .main_title .main_title_txt01 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.section.ub-style.main_product_list .main_title .main_title_txt02 {
+  color: #555;
+}
+
+.ub-style .flex .item .thumb img {
+  width: 100%;
+}
+
+.ub-style .ec-base-product {
+  position: relative;
+}
+
+.section.ub-style .ec-base-product .prdList {
+  position: absolute;
+  width: 65%;
+  bottom: 0;
+  margin: 0px 0px -70px;
+}
+
 /* 첫번째 상품의 크기를 지정 */
 .ub-style .ec-base-product .prdList>li {
-  width: 16.66%;
+  /* width: 16.66%; */
   vertical-align: bottom;
 }
 
 .ub-style .ec-base-product .prdList>li:nth-child(1) {
-  width: 50%;
+  /* width: 50%; */
 }
 
 /* 첫번째 상품의 .description 감추기 */
-.ub-style .ec-base-product .prdList>li:nth-child(1) .description {
+.ub-style .ec-base-product .prdList>li:nth-child(1) .description,
+.ub-style .ec-base-product .prdList>li .description {
   display: none;
 }
 
+.ec-base-product ul.grid5_slide .thumbnail .sale_box,
+.ec-base-product .prdList .thumbnail .sale_box {
+  top: 10px;
+  right: 10px;
+}
 
 /*********
   override
@@ -412,6 +443,14 @@ product_listmain xans-product-listmain
 
 
 /* 미디어쿼리 */
+@media (max-width: 1480px) {
+
+  .ec-base-product ul.grid5_slide .thumbnail .sale_box,
+  .ec-base-product .prdList .thumbnail .sale_box {
+    width: calc(0.53vw + 34.35px);
+    height: calc(0.53vw + 34.35px);
+  }
+}
 
 @media (max-width:1024px) {
 
@@ -446,14 +485,22 @@ product_listmain xans-product-listmain
   }
 
   .ub-style .ec-base-product .prdList>li {
-    width: 50%;
+    /* width: 50%; */
+    width: 33.33%;
   }
 
   .ub-style .ec-base-product .prdList>li:nth-child(1) .description {
-    display: block;
+    /* display: block; */
+    display: none;
   }
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .ec-base-product .prdList {
+    width: 100%;
+    /* margin: 0px -40px -44px; */
+  }
+}
 
 @media (max-width:768px) {
   .ub-style .shortcut-item {

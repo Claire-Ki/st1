@@ -19,7 +19,7 @@
 /*(탭메뉴버튼과 섹션타이틀) 의 컨테이너 */
 .ub-style.main_product_category .main_product_inner {
   box-sizing: border-box;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   background-color: #fcf;
 }
 
@@ -404,6 +404,12 @@ product_listmain xans-product-listmain
   color: currentColor;
 
 }
+
+/* #서브카테고리 중앙정렬 */
+.ec-base-tab.typeMenu {
+  justify-content: center;
+}
+
 
 /* 미디어쿼리 */
 

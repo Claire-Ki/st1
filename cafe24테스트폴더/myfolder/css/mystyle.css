@@ -84,7 +84,7 @@ button {
 }
 
 .dan-section .item .desc {
-  font-size: 32px;
+  font-size: 27px;
   font-weight: 700;
   color: #fff;
 
@@ -403,17 +403,17 @@ product_listmain xans-product-listmain
 } */
 
 /* 첫번째 상품의 크기를 지정 */
-.ub-style.r-style .ec-base-product .prdList>li {
+/* .ub-style.r-style .ec-base-product .prdList>li {
   width: 16.66%;
   vertical-align: bottom;
 }
 
 .ub-style.r-style .ec-base-product .prdList>li:nth-child(1) {
   width: 50%;
-}
+} */
 
 /* 첫번째 상품의 .description 감추기 */
-.ub-style.r-style .ec-base-product .prdList>li:nth-child(1) .description,
+/* .ub-style.r-style .ec-base-product .prdList>li:nth-child(1) .description,
 .ub-style.r-style .ec-base-product .prdList>li .description {
   display: none;
 }
@@ -422,7 +422,7 @@ product_listmain xans-product-listmain
 .ec-base-product .prdList .thumbnail .sale_box {
   top: 10px;
   right: 10px;
-}
+} */
 
 /*********
   override
@@ -454,6 +454,11 @@ product_listmain xans-product-listmain
   width: 30%;
   position: absolute;
   left: calc(50% + 10px);
+}
+
+/* 숏컷 라디우스 오류해결 */
+.ub-style .shortcut-list .shortcut-item .shortcut-img {
+  border-radius: 20%;
 }
 
 .ub-style.ec-base-product .prdList .thumbnail a img {}
@@ -512,9 +517,6 @@ a[class^='btnNormal'] {
 }
 
 
-.main_image_text_gallery .main_3dan_banner ul li a .main_3dan_banner_txt {
-  padding: 20px 0 20px 35px;
-}
 
 
 /* 미디어쿼리 */
@@ -581,6 +583,9 @@ a[class^='btnNormal'] {
   }
 }
 
+#header.fixed {
+  border-bottom: none !important;
+}
 @media (max-width:768px) {
   .ub-style .shortcut-item {
     flex: 0 1 auto;
@@ -588,4 +593,15 @@ a[class^='btnNormal'] {
     max-width: 100px;
     min-width: 80px;
   }
+}
+
+#header.fixed {
+  border-bottom: none !important;
+}
+
+
+@media (max-width:480px) {
+.dan-section .item .desc {
+  font-size: 15px;
+}
 }

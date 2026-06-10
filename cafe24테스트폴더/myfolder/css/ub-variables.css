@@ -4,6 +4,21 @@
 :root {
   /* 색상 */
   --primary-color: #1f1f1f;
+  /* 260609 브랜드컬러 추가 */
+  --r-primary-color: #EADBC8;
+  /* --r-primary-dark-color: #d0ac88; */
+  --r-primary-dark-color: #c6ae8d;
+  --r-background-color: #FAF8F5;
+  --r-surface-color: #fff;
+  --r-text-color: #3E3A36;
+  --r-accent-color: #96A48B;
+  /* var(--r-primary-color)
+  var(--r-background-color)
+  var(--r-surface-color)
+  var(--r-text-color)
+  var(--r-accent-color) */
+
+  --font-color-base: #3E3A36;
 
   --ub-font-base-color: #000;
   --ub-font-title-color: #000;

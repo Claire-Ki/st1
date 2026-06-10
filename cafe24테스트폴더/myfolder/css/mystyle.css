@@ -124,9 +124,18 @@ button {
 .ub-style .ub-style-inner {}
 
 /* .section이 브라우저를 다 차지할 때 정렬을 위한  .ub-style-inner*/
+@media (min-width:1480px) {
+  #contents>.section_full.ub-style .ub-style-inner {
+    /* max-width: 1480px; */
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 @media (min-width:1024px) {
   #contents>.section_full.ub-style .ub-style-inner {
-    max-width: 1420px;
+    max-width: 1480px;
     width: 92%;
     margin-left: auto;
     margin-right: auto;
@@ -251,7 +260,8 @@ button {
 
 .ub-style.main_product_category.tab-direction-column.main_product_inner_nowrap .main_product_inner {
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -352,34 +362,36 @@ button {
 }
 
 /****
-product_listmain xans-product-listmain
+product_listmain xans-product-listmain 
+선택자 충돌로로 인해서 클래스명 변경
+.ub-style->.r-style
 ****/
-.ub-style.main_product_list {
+.r-style.main_product_list {
   position: relative;
 
 }
 
 /* 섹션타이틀 위치 조정 */
-.section.ub-style.main_product_list .main_title {
+.section.r-style.main_product_list .main_title {
   position: absolute;
   left: calc(50% + 10px);
   top: 10px;
 }
 
-.section.ub-style.main_product_list .main_title .main_title_txt01 {
+.section.r-style.main_product_list .main_title .main_title_txt01 {
   font-size: 40px;
   font-weight: 600;
 }
 
-.section.ub-style.main_product_list .main_title .main_title_txt02 {
+.section.r-style.main_product_list .main_title .main_title_txt02 {
   color: #555;
 }
 
-.ub-style .flex .item .thumb img {
+.r-style .flex .item .thumb img {
   width: 100%;
 }
 
-.ub-style .ec-base-product {
+/* .section.ub-style .ec-base-product {
   position: relative;
 }
 
@@ -388,21 +400,21 @@ product_listmain xans-product-listmain
   width: 65%;
   bottom: 0;
   margin: 0px 0px -70px;
-}
+} */
 
 /* 첫번째 상품의 크기를 지정 */
-.ub-style .ec-base-product .prdList>li {
-  /* width: 16.66%; */
+.r-style .ec-base-product .prdList>li {
+  width: 16.66%;
   vertical-align: bottom;
 }
 
-.ub-style .ec-base-product .prdList>li:nth-child(1) {
-  /* width: 50%; */
+.r-style .ec-base-product .prdList>li:nth-child(1) {
+  width: 50%;
 }
 
 /* 첫번째 상품의 .description 감추기 */
-.ub-style .ec-base-product .prdList>li:nth-child(1) .description,
-.ub-style .ec-base-product .prdList>li .description {
+.r-style .ec-base-product .prdList>li:nth-child(1) .description,
+.r-style .ec-base-product .prdList>li .description {
   display: none;
 }
 
@@ -436,9 +448,72 @@ product_listmain xans-product-listmain
 
 }
 
+/* 추천상품 깨짐 수정*/
+.ub-style.main_product_category.tab-direction-column.main_product_inner_nowrap .main_product_inner {
+  flex-direction: column;
+  width: 30%;
+  position: absolute;
+  left: calc(50% + 10px);
+}
+
+.ub-style.ec-base-product .prdList .thumbnail a img {}
+
+
 /* #서브카테고리 중앙정렬 */
 .ec-base-tab.typeMenu {
   justify-content: center;
+}
+
+
+/* 칼라칩 이동 */
+/* 카드 위로 */
+/* .ec-base-product .prdList .prdList__item {
+  position: relative;
+}
+
+.ec-base-product .spec .color {
+  position: absolute;
+  top: -20px;
+  right: 0;
+} */
+
+.ec-base-product .spec .chips {
+  width: 20px;
+  height: 10px;
+  border-radius: 999px;
+}
+
+/* 상품설명 위로 */
+.ec-base-product .prdList .description {
+  position: relative;
+}
+
+.ec-base-product .spec .color {
+  position: absolute;
+  top: -20px;
+  right: 0;
+}
+
+/* 컬러변경 */
+/* 버튼 색깔 변경 */
+[class^='btnSubmit'],
+a[class^='btnSubmit'] {
+  background: var(--r-accent-color);
+}
+
+[class^='btnNormal'],
+a[class^='btnNormal'] {
+  border: 1px solid var(--r-accent-color);
+  color: var(--r-accent-color);
+}
+
+.xans-order-basketpackage .ec-base-prdInfo.gCheck .sumPrice .label {
+  color: var(--r-text-color);
+}
+
+
+.main_image_text_gallery .main_3dan_banner ul li a .main_3dan_banner_txt {
+  padding: 20px 0 20px 35px;
 }
 
 

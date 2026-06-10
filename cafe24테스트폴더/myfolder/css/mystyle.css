@@ -121,7 +121,11 @@ button {
   background-color: var(--r-background-color);
 }
 
-.ub-style .ub-style-inner {}
+.ub-style .ub-style-inner {
+ display: flex;
+  padding-top: 40px;
+  padding-bottom: 10px;
+}
 
 /* .section이 브라우저를 다 차지할 때 정렬을 위한  .ub-style-inner*/
 @media (min-width:1480px) {
@@ -181,7 +185,7 @@ button {
 }
 
 .ub-style.main_product_category.tab-direction-row.tabmenu-1col .main_product_inner {
-  width: var(----tab-row-tabmenu-1col-width, 18%);
+  width: var(----tab-row-tabmenu-1col-width, 25%);
 }
 
 .ub-style.main_product_category.tab-direction-row.tabmenu-2col .main_product_inner {
@@ -462,6 +466,17 @@ product_listmain xans-product-listmain
 }
 
 .ub-style.ec-base-product .prdList .thumbnail a img {}
+
+/* 줄방향 메인프로덕트 이너 방향 오류, 배경색 오류해결-색오류 해결되면 지울것 */
+.ub-style.tab-direction-row.main_product_category.section_full .ub-style-inner .main_product_inner {
+   justify-content: flex-start;
+   background-color: transparent;
+}
+
+.ub-style.tab-direction-row.main_product_category.section_full .ub-style-inner .content_list {
+  background-color: transparent;
+}
+
 
 
 /* #서브카테고리 중앙정렬 */

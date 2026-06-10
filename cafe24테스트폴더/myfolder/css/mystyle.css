@@ -12,7 +12,7 @@
 /* 탭 최상위 container  */
 .ub-style.main_product_category {
   box-sizing: border-box;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   background-color: #cff;
 }
 
@@ -26,7 +26,7 @@
 /* 탭UI의 탭컨텐츠 컨테이너 */
 .ub-style.main_product_category .content_list {
   box-sizing: border-box;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   background-color: #ffc;
 }
 
@@ -118,7 +118,7 @@ button {
 /* .section.ub-style 스타일 */
 .ub-style.section_full {
   /* 본인브랜드색상을 사용하세요 변수 사용을 권해요 var(--section-bg)  */
-  background-color: var(--section-bg);
+  background-color: var(--r-background-color);
 }
 
 .ub-style .ub-style-inner {}
@@ -126,7 +126,7 @@ button {
 /* .section이 브라우저를 다 차지할 때 정렬을 위한  .ub-style-inner*/
 @media (min-width:1480px) {
   #contents>.section_full.ub-style .ub-style-inner {
-    /* max-width: 1480px; */
+    max-width: 1960px;
     width: 92%;
     margin-left: auto;
     margin-right: auto;
@@ -363,31 +363,31 @@ button {
 
 /****
 product_listmain xans-product-listmain 
-선택자 충돌로로 인해서 클래스명 변경
-.ub-style->.r-style
+선택자 충돌로로 인해서 클래스명 추가
+.ub-style->.ub-style.r-style
 ****/
-.r-style.main_product_list {
+.ub-style.r-style.main_product_list {
   position: relative;
 
 }
 
 /* 섹션타이틀 위치 조정 */
-.section.r-style.main_product_list .main_title {
+.section.ub-style.r-style.main_product_list .main_title {
   position: absolute;
   left: calc(50% + 10px);
   top: 10px;
 }
 
-.section.r-style.main_product_list .main_title .main_title_txt01 {
+.section.ub-style.r-style.main_product_list .main_title .main_title_txt01 {
   font-size: 40px;
   font-weight: 600;
 }
 
-.section.r-style.main_product_list .main_title .main_title_txt02 {
+.section.ub-style.r-style.main_product_list .main_title .main_title_txt02 {
   color: #555;
 }
 
-.r-style .flex .item .thumb img {
+.ub-style.r-style .flex .item .thumb img {
   width: 100%;
 }
 
@@ -403,18 +403,18 @@ product_listmain xans-product-listmain
 } */
 
 /* 첫번째 상품의 크기를 지정 */
-.r-style .ec-base-product .prdList>li {
+.ub-style.r-style .ec-base-product .prdList>li {
   width: 16.66%;
   vertical-align: bottom;
 }
 
-.r-style .ec-base-product .prdList>li:nth-child(1) {
+.ub-style.r-style .ec-base-product .prdList>li:nth-child(1) {
   width: 50%;
 }
 
 /* 첫번째 상품의 .description 감추기 */
-.r-style .ec-base-product .prdList>li:nth-child(1) .description,
-.r-style .ec-base-product .prdList>li .description {
+.ub-style.r-style .ec-base-product .prdList>li:nth-child(1) .description,
+.ub-style.r-style .ec-base-product .prdList>li .description {
   display: none;
 }
 
@@ -449,7 +449,7 @@ product_listmain xans-product-listmain
 }
 
 /* 추천상품 깨짐 수정*/
-.ub-style.main_product_category.tab-direction-column.main_product_inner_nowrap .main_product_inner {
+.r-style.main_product_category.tab-direction-column.main_product_inner_nowrap .main_product_inner {
   flex-direction: column;
   width: 30%;
   position: absolute;
@@ -525,6 +525,10 @@ a[class^='btnNormal'] {
     width: calc(0.53vw + 34.35px);
     height: calc(0.53vw + 34.35px);
   }
+}
+
+#header.fixed {
+  border-bottom: none !important;
 }
 
 @media (max-width:1024px) {

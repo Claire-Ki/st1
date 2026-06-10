@@ -22,7 +22,7 @@
 
       // 자동 재생 설정 (3초 간격, 사용자 상호작용 후에도 계속 재생)
       autoplay: {
-        delay: 3000,
+        delay: 4000,
         disableOnInteraction: false,
       },
 

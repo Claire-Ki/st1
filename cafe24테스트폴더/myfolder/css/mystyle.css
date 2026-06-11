@@ -630,6 +630,11 @@ a[class^='btnNormal'] {
     width: calc(100% / var(--shortcut-item-count));
     max-width: 100px;
     min-width: 80px;
+  
+}
+
+  .ub-style.main_product_category.tab-direction-column.main_product_inner_nowrap .main_product_inner {
+    gap: 0px;
   }
 }
 
